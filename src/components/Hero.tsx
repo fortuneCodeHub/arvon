@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
-import heroBg from '../assets/hero-bg.jpg';
-import heroModels from '../assets/hero-models.png';
+import heroBg from '../assets-webp/hero-bg.webp';
+import heroModels from '../assets-webp/hero-models.webp';
 
 const Hero = () => {
   const sectionRef = useRef<HTMLElement>(null);

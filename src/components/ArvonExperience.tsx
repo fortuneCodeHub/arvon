@@ -2,9 +2,9 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import ellipseOneAvatar from "../assets/ellipse-1.jpg"
-import ellipseTwoAvatar from "../assets/ellipse-2.jpg"
-import ellipseThreeAvatar from "../assets/ellipse-3.jpg"
+import ellipseOneAvatar from "../assets-webp/ellipse-1.webp"
+import ellipseTwoAvatar from "../assets-webp/ellipse-2.webp"
+import ellipseThreeAvatar from "../assets-webp/ellipse-3.webp"
 
 gsap.registerPlugin(ScrollTrigger);
 

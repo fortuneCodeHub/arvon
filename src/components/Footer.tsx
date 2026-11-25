@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import footerModelAvatar from '../assets/footer-model.png';
+import footerModelAvatar from '../assets-webp/footer-model.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 

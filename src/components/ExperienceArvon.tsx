@@ -2,10 +2,10 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import tryOnIcon from '../assets/virtual-try-on.png';
-import savedLooksIcon from '../assets/saved-looks.png';
-import styleProfileIcon from '../assets/style-profile.png';
-import orderTrackingIcon from '../assets/order-tracking.png';
+import tryOnIcon from '../assets-webp/virtual-try-on.webp';
+import savedLooksIcon from '../assets-webp/saved-looks.webp';
+import styleProfileIcon from '../assets-webp/style-profile.webp';
+import orderTrackingIcon from '../assets-webp/order-tracking.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 

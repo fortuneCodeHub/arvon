@@ -2,8 +2,8 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import philosophyBg from '../assets/philosophy-bg.png';
-import philosophyModel from '../assets/philosophy-model.png';
+import philosophyBg from '../assets-webp/philosophy-bg.webp';
+import philosophyModel from '../assets-webp/philosophy-model.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 

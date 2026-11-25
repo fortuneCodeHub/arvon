@@ -2,9 +2,9 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import appMockup1 from '../assets/app-1.png';
-import appMockup2 from '../assets/app-2.png';
-import appMockup3 from '../assets/app-3.png';
+import appMockup1 from '../assets-webp/app-1.webp';
+import appMockup2 from '../assets-webp/app-2.webp';
+import appMockup3 from '../assets-webp/app-3.webp';
 import appStoreIcon from '../assets/app-store.svg';
 import googlePlayIcon from '../assets/play-store.svg';
 

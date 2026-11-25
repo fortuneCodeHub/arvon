@@ -2,9 +2,9 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import trustOneAvatar from "../assets/trust-1.jpg"
-import trustTwoAvatar from "../assets/trust-2.jpg"
-import trustThreeAvatar from "../assets/trust-3.jpg"
+import trustOneAvatar from "../assets-webp/trust-1.webp"
+import trustTwoAvatar from "../assets-webp/trust-2.webp"
+import trustThreeAvatar from "../assets-webp/trust-3.webp"
 
 gsap.registerPlugin(ScrollTrigger);
 

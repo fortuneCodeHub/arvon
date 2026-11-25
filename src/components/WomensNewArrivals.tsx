@@ -2,10 +2,10 @@ import { useState, useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import arvonTankBlack from '../assets/womens-arvon-tank-black.png';
-import arvonTankWhite from '../assets/womens-arvon-tank-white.png';
-import igniteTankBlack from '../assets/womens-ignite-tank-black.png';
-import igniteTankWhite from '../assets/womens-ignite-tank-white.png';
+import arvonTankBlack from '../assets-webp/womens-arvon-tank-black.webp';
+import arvonTankWhite from '../assets-webp/womens-arvon-tank-white.webp';
+import igniteTankBlack from '../assets-webp/womens-ignite-tank-black.webp';
+import igniteTankWhite from '../assets-webp/womens-ignite-tank-white.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 

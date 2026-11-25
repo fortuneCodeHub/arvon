@@ -2,12 +2,12 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import featuredWomen1 from '../assets/featured-women-1.png';
-import featuredWomen2 from '../assets/featured-women-2.png';
-import featuredWomen3 from '../assets/featured-women-3.png';
-import featuredMen1 from '../assets/featured-men-1.png';
-import featuredMen2 from '../assets/featured-men-2.png';
-import featuredMen3 from '../assets/featured-men-3.png';
+import featuredWomen1 from '../assets-webp/featured-women-1.webp';
+import featuredWomen2 from '../assets-webp/featured-women-2.webp';
+import featuredWomen3 from '../assets-webp/featured-women-3.webp';
+import featuredMen1 from '../assets-webp/featured-men-1.webp';
+import featuredMen2 from '../assets-webp/featured-men-2.webp';
+import featuredMen3 from '../assets-webp/featured-men-3.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 

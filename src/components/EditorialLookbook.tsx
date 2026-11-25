@@ -2,8 +2,8 @@ import { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import lookbookBg from '../assets/lookbook-bg.png';
-import lookbookOverlay from '../assets/lookbook-overlay.png';
+import lookbookBg from '../assets-webp/lookbook-bg.webp';
+import lookbookOverlay from '../assets-webp/lookbook-overlay.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -2,10 +2,10 @@ import { useState, useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import flameTopBlack from '../assets/mens-flame-top-black.png';
-import arvonEssentialsWhite from '../assets/mens-arvon-essentials-white.png';
-import arvonEssentialsBlack from '../assets/mens-arvon-essentials-black.png';
-import flameTopWhite from '../assets/mens-flame-top-white.png';
+import flameTopBlack from '../assets-webp/mens-flame-top-black.webp';
+import arvonEssentialsWhite from '../assets-webp/mens-arvon-essentials-white.webp';
+import arvonEssentialsBlack from '../assets-webp/mens-arvon-essentials-black.webp';
+import flameTopWhite from '../assets-webp/mens-flame-top-white.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
