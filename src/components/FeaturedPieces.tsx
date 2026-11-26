@@ -131,6 +131,7 @@ const FeaturedPieces = () => {
   }, []);
 
   // ── MOBILE: centre slide at full size, neighbours scaled back and dimmed ──
+  // ── MOBILE: centre slide at full size, neighbours scaled back and dimmed ──
   useLayoutEffect(() => {
     const track = trackRef.current;
     if (!track) return;
@@ -139,13 +140,15 @@ const FeaturedPieces = () => {
     const slides = slideRefs.current.filter(Boolean) as HTMLDivElement[];
     if (!slides.length) return;
 
-    const setters = slides.map((s) => {
-      gsap.set(s, { transformOrigin: 'center center' });
-      return {
-        scale: gsap.quickSetter(s, 'scale'),
-        opacity: gsap.quickSetter(s, 'opacity'),
-      };
-    });
+    gsap.set(slides, { transformOrigin: 'center center' });
+
+    // scaleX / scaleY separately — passing 'scale' to quickSetter expands to
+    // "scaleX, scaleY", which the DOM rejects as an attribute name.
+    const setters = slides.map((s) => ({
+      scaleX: gsap.quickSetter(s, 'scaleX'),
+      scaleY: gsap.quickSetter(s, 'scaleY'),
+      opacity: gsap.quickSetter(s, 'opacity'),
+    }));
 
     let frame = 0;
 
@@ -160,8 +163,10 @@ const FeaturedPieces = () => {
         const r = slide.getBoundingClientRect();
         const slideCentre = r.left + r.width / 2;
         const t = Math.min(Math.abs(slideCentre - trackCentre) / falloff, 1);
+        const scale = 1 - t * 0.13;
 
-        setters[i].scale(1 - t * 0.13);
+        setters[i].scaleX(scale);
+        setters[i].scaleY(scale);
         setters[i].opacity(1 - t * 0.55);
       });
     };
@@ -179,7 +184,7 @@ const FeaturedPieces = () => {
       if (frame) cancelAnimationFrame(frame);
       track.removeEventListener('scroll', schedule);
       window.removeEventListener('resize', schedule);
-      gsap.set(slides, { clearProps: 'scale,opacity,transformOrigin' });
+      gsap.set(slides, { clearProps: 'all' });
     };
   }, []);
 
