@@ -113,74 +113,79 @@ const ExperienceArvon = () => {
         </p>
       </div>
 
-      {/* Cards grid -- desktop 4 col, mobile 2 col */}
-      <div ref={gridRef} style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        gap: 0,
-        width: '100%',
-        maxWidth: '1200px',
-      }}>
-        {features.map((feature, i) => (
-          <div
-            key={i}
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: 'clamp(10px, 1.39vw, 20px)',
-              padding: 'clamp(20px, 2.89vw, 50px) clamp(10px, 1.39vw, 24px)',
-              borderRight: i < features.length - 1 ? '1px solid #e8e8e8' : 'none',
-            }}
-          >
-            {/* Icon -- scales with viewport, never tiny on mobile */}
-            <div style={{
-              width: 'clamp(100px, 13.89vw, 240px)',
-              height: 'clamp(100px, 13.89vw, 240px)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-              <img
-                src={feature.image}
-                alt={feature.title}
+        {/* Cards grid -- desktop 4 col, mobile 2 col */}
+        {/* Cards grid -- wraps to 2 per row below md, 4 across from md up */}
+        <div ref={gridRef} style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            columnGap: 0,
+            rowGap: '14px',
+            width: '100%',
+            maxWidth: '1200px',
+        }}>
+            {features.map((feature, i) => (
+            <div
+                key={i}
+                className={
+                'basis-1/2 grow md:basis-0 ' +
+                (i < features.length - 1 ? 'md:border-r md:border-[#e8e8e8]' : '')
+                }
                 style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain',
-                  display: 'block',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 'clamp(10px, 1.39vw, 20px)',
+                padding: 'clamp(20px, 2.89vw, 50px) clamp(10px, 1.39vw, 24px)',
                 }}
-              />
-            </div>
+            >
+            {/* Icon -- scales with viewport, never tiny on mobile */}
+                <div style={{
+                width: 'clamp(100px, 13.89vw, 240px)',
+                height: 'clamp(100px, 13.89vw, 240px)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                }}>
+                    <img
+                        src={feature.image}
+                        alt={feature.title}
+                        style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'contain',
+                        display: 'block',
+                        }}
+                    />
+                </div>
 
-            {/* Text */}
-            <div style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: '4px',
-              textAlign: 'center',
-            }}>
-              <span style={{
-                fontFamily: "'Josefin Sans', sans-serif",
-                fontWeight: 300,
-                fontSize: 'clamp(9px, 0.87vw, 13px)',
-                color: '#888',
-                letterSpacing: '0.03em',
-              }}>
-                {feature.subtitle}
-              </span>
-              <span style={{
-                fontFamily: "'Josefin Sans', sans-serif",
-                fontWeight: 600,
-                fontSize: 'clamp(11px, 1.04vw, 17px)',
-                color: '#000',
-                letterSpacing: '-0.01em',
-              }}>
-                {feature.title}
-              </span>
+                {/* Text */}
+                <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '4px',
+                textAlign: 'center',
+                }}>
+                    <span style={{
+                        fontFamily: "'Josefin Sans', sans-serif",
+                        fontWeight: 300,
+                        fontSize: 'clamp(9px, 0.87vw, 13px)',
+                        color: '#888',
+                        letterSpacing: '0.03em',
+                    }}>
+                        {feature.subtitle}
+                    </span>
+                    <span style={{
+                        fontFamily: "'Josefin Sans', sans-serif",
+                        fontWeight: 600,
+                        fontSize: 'clamp(11px, 1.04vw, 17px)',
+                        color: '#000',
+                        letterSpacing: '-0.01em',
+                    }}>
+                        {feature.title}
+                    </span>
+                </div>
             </div>
-          </div>
         ))}
       </div>
     </section>
